@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5B56ECA2-5AFB-4FFC-899D-833F0E5C957A}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{93F1086A-0941-4576-9AC2-40DDD69F0B62}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TodoListClientLayer</RootNamespace>
-    <AssemblyName>TodoListClientLayer</AssemblyName>
+    <RootNamespace>TodoListBusinessLayer</RootNamespace>
+    <AssemblyName>TodoListBusinessLayer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,16 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TodoListClient.cs" />
+    <Compile Include="TodoListBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TodoListBusinessLayer\TodoListBusinessLayer.csproj">
-      <Project>{93f1086a-0941-4576-9ac2-40ddd69f0b62}</Project>
-      <Name>TodoListBusinessLayer</Name>
+    <ProjectReference Include="..\DatabaseLayer\TodoListDatabaseLayer.csproj">
+      <Project>{3db3d1fe-b5ae-4c0f-8879-30634c91dbb0}</Project>
+      <Name>TodoListDatabaseLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
