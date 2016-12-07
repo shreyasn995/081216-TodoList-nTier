@@ -34,7 +34,7 @@ namespace TodoListClientLayer
                 case "m":
                     Console.WriteLine("Enter item number to mark as done: ");
                     string idToChange = Console.ReadLine();
-
+                    todoList.MarkItem(idToChange);
                     goto Startup;
                 default:
                     Console.WriteLine("Invalid option!");
