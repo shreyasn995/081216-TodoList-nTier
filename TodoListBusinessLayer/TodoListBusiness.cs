@@ -21,11 +21,11 @@ namespace TodoListBusinessLayer
         }
         public void DeleteItem(string itemId)
         {
-            db.DeleteItem((int) Int32.Parse(itemId));
+            db.DeleteItem(Int32.Parse(itemId.Replace(Environment.NewLine, "")));
         }
         public void MarkItem(string itemId)
         {
-            db.MarkItem((int) Int32.Parse(itemId));
+            db.MarkItem(Int32.Parse(itemId.Replace(Environment.NewLine, "")));
         }
     }
 }

@@ -25,11 +25,11 @@ namespace TodoListDatabaseLayer
         }
         public void DeleteItem(int itemId)
         {
-            itemList.Remove(itemList[itemId]);
+            itemList.Remove(itemList[--itemId]);
         }
         public void MarkItem(int itemId)
         {
-            itemList[itemId].MarkDone();
+            itemList[--itemId].MarkDone();
         } 
     }
 
