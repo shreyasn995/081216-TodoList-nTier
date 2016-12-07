@@ -24,12 +24,12 @@ namespace TodoListClientLayer
                 case "n":
                     Console.WriteLine("Enter new item description: ");
                     string newItemDescription = Console.ReadLine();
-                    // New item
+                    todoList.NewItem(newItemDescription);
                     goto Startup;
                 case "d":
                     Console.WriteLine("Enter item number to delete: ");
                     string idToDelete = Console.ReadLine();
-                    // Delete item
+                    todoList.DeleteItem(idToDelete);
                     goto Startup;
                 case "m":
                     Console.WriteLine("Enter item number to mark as done: ");

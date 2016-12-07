@@ -19,13 +19,13 @@ namespace TodoListBusinessLayer
         {
             db.NewItem(description);
         }
-        public void DeleteItem(int itemId)
+        public void DeleteItem(string itemId)
         {
-            db.DeleteItem(itemId);
+            db.DeleteItem(Int32.Parse(itemId));
         }
-        public void MarkItem(int itemId)
+        public void MarkItem(string itemId)
         {
-            db.MarkItem(itemId);
+            db.MarkItem(Int32.Parse(itemId));
         }
     }
 }
